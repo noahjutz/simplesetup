@@ -25,12 +25,12 @@ log "update & upgrade"
 sudo pacman -Syyu
 
 log "install packages"
-sudo pacman -S --noconfirm $(cat to_install.txt)
+to_install="fish neovim"
+sudo pacman -S --noconfirm $to_install
 
 log "uninstall bloat"
-while read p; do
-  sudo pacman -Rcns --noconfirm $p
-done < to_remove.txt
+to_remove="gedit totem file-roller gnome-calculator gparted kvantum-qt5 gnome-system-log zsh"
+sudo pacman -Rcns --noconfirm $to_remove
 
 log "uninstall orphans"
 sudo pacman -R --noconfirm $(pacman -Qdtq)

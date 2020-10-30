@@ -1,8 +1,0 @@
-gedit
-totem
-file-roller
-gnome-calculator
-gparted
-kvantum-qt5
-gnome-system-log
-zsh
