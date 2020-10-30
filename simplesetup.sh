@@ -20,7 +20,8 @@ sudo pacman -Syyu
 sudo pacman -S --noconfirm $(cat to_install.txt)
 
 # Uninstall bloat
-sudo pacman -Rns --noconfirm $(cat to_remove.txt)
+sudo pacman -Rcns --noconfirm $(cat to_remove.txt)
+sudo pacman -R --noconfirm $(pacman -Qdtq)
 
 # Set shell
 sudo chsh -s /usr/bin/fish noah
