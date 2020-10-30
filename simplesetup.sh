@@ -28,7 +28,11 @@ log "install packages"
 sudo pacman -S --noconfirm $(cat to_install.txt)
 
 log "uninstall bloat"
-sudo pacman -Rcns --noconfirm $(cat to_remove.txt)
+while read p; do
+  sudo pacman -Rcns --noconfirm $p
+done < to_remove.txt
+
+log "uninstall orphans"
 sudo pacman -R --noconfirm $(pacman -Qdtq)
 
 log "set shell"
