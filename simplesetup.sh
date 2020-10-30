@@ -17,10 +17,10 @@ sudo rankmirrors -f
 sudo pacman -Syyu
 
 # Install packages
-sudo pacman -S --noconfirm neovim fish
+sudo pacman -S --noconfirm $(cat to_install.txt)
 
 # Uninstall bloat
-sudo pacman -Rns --noconfirm gedit totem file-roller gnome-calculator gparted kvantum-qt5 gnome-system-log zsh
+sudo pacman -Rns --noconfirm $(cat to_remove.txt)
 
 # Set shell
 sudo chsh -s /usr/bin/fish noah
