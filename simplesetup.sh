@@ -1,13 +1,12 @@
 #!/bin/sh
 
 function log() {
-  echo
   echo "==> $1"
   echo
 }
 
 log "request root privileges"
-sudo log "Thank you!"
+sudo echo "Thank you!"
 
 log "restore dotfiles"
 dotfiles_url=https://github.com/noahjutz/newdotfiles
