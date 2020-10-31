@@ -14,7 +14,7 @@ git clone --bare $dotfiles_url $HOME/.cfg
 git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout -f
 
 log "restore gnome backup"
-backup_path=$HOME/.cfg_files/gnome_settings_backup
+backup_path=$HOME/.cfgfiles/gnome_settings_backup
 dconf load / < $backup_path
 
 log "rankmirrors"
