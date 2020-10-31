@@ -1,8 +1,8 @@
 #!/bin/sh
 
 function log() {
-  echo "==> $1"
   echo
+  echo "==> $1"
 }
 
 log "request root privileges"
