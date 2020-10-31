@@ -16,6 +16,7 @@ git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout -f
 log "restore gnome backup"
 backup_path=$HOME/.cfgfiles/gnome_settings_backup
 dconf load / < $backup_path
+echo "done with exit code $?"
 
 log "rankmirrors"
 sudo rankmirrors -f
