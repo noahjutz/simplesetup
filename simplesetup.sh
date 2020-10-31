@@ -38,3 +38,4 @@ sudo pacman -R --noconfirm $(pacman -Qdtq)
 log "set shell"
 sudo chsh -s /usr/bin/fish noah
 
+log "DONE"
